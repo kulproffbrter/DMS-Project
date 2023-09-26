@@ -1,0 +1,75 @@
+.parent-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 35px;
+    padding: 8px 13px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    /*flex: 1;
+    padding-left: 10px;*/
+}
+
+.search-box input {
+    /*flex: 1;*/
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+.icon-search,
+.icon-close {
+    margin-right: 10px;
+    /* Adjust spacing between icon and input */
+}
+
+.button-frame {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 15px;
+    margin-top: 45px;
+    margin-right: 100px;
+}
+
+button {
+    display: flex;
+    padding: 22px 15px;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    background-color: #ECECEC;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    background-color: #B1B1B1;
+    border-radius: 8px;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}

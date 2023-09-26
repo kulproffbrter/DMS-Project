@@ -1,0 +1,29 @@
+import React from 'react';
+import './App.css';
+import Navbar from '../src/components/Navbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import DashBoard from '../src/pages/Dashboard';
+import StudentList from '../src/pages/StudentList';
+import RoomContract from './pages/RoomContract';
+import ListOfRooms from './pages/ListOfRooms';
+
+function App() {
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <switch>
+        <Routes>
+          <Route path='/' exact element={DashBoard} />
+          <Route path='/studentlist' element={StudentList} />
+          <Route path='/roomcontract' element={RoomContract} />
+          <Route path='/listofroom' element={ListOfRooms} />
+        </Routes>
+    
+        </switch>
+        </Router>
+    </>
+  );
+}
+
+export default App;

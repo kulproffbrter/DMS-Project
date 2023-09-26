@@ -1,0 +1,104 @@
+import { BsBorderAll, BsFillPersonCheckFill } from 'react-icons/bs';
+import { MdOutlinePayment, MdOutlineReportGmailerrorred } from 'react-icons/md';
+import Item from '../components/Item';
+import './css/Dashboard.css';
+
+function Dashboard() {
+    return (
+        <div className="main-content">
+            <div className="container">
+                <div className="row-1">
+                    <div className="column-1">
+                        <div className="room">
+                            <Item icon={<BsBorderAll size={14} />} text="Total Rooms" />
+                        </div>
+                        <div className="registered">
+                            <Item icon={<BsFillPersonCheckFill size={20} />} text="Registered" />
+                        </div>
+                    </div>
+                </div>
+                <div className="row-2">
+                    <div className="column-2">
+                        <div className="payment">
+                            <Item icon={<MdOutlinePayment size={20} />} text="Payment Notification" />
+                        </div>
+                        <div className="request">
+                            <Item icon={<MdOutlineReportGmailerrorred size={20} />} text="Student Request" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Dashboard;
+
+//css
+/* body {
+  justify-content: center;
+  align-items: center;
+}
+
+.main-content {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #F8F3F3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: rgb(0, 0, 0);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  width: 800px;
+  height: 150px;
+  position: absolute;
+  top: 20%;
+}
+
+.row-1,
+.row-2 {
+  align-items: center;
+  height: 50px;
+  width: 100;
+}
+
+.column-1,
+.column-2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 50px;
+  width: 350px;
+  border: 0;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.item span {
+  margin-left: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.item:hover {
+  background-color: #ECECEC;
+  cursor: pointer;
+  border: 0px;
+}
+
+.item:active {
+  background-color: #B1B1B1;
+} */
