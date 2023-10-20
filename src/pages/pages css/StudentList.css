@@ -1,33 +1,165 @@
+.page-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 350px;
+    height: 35px;
+    padding: 8px 13px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    margin-top: 50px;
+    margin-left: 65px;
+}
+
+.container.focused {
+    border-color: rgb(178, 178, 178);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding-left: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.icon-search,
+.icon-close {
+    align-items: center;
+}
+
+.dropdown-floorSelected {
+    display: flex;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    margin-top: 50px;
+}
+
+.dropdown-faculty {
+    display: flex;
+    text-align: left;
+    padding-left: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 260px;
+    height: 35px;
+    margin-top: 50px;
+}
+
+.dropdown-department {
+    display: flex;
+    text-align: left;
+    padding-left: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 260px;
+    height: 35px;
+    margin-top: 50px;
+    margin-right: 180px;
+}
+
+/* Edit Components CSS
+.control-edit {
+    position: relative;
+    margin-top: 50px;
+    margin-right: 70px;
+}
+
+.options-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-align: center;
+    width: 120px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.options-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.options-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.options-menu li:hover {
+    background-color: #f0f0f0;
+}
+*/
+
+
 .datalist-container {
     display: flex;
     justify-content: center;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 50px;
-    justify-content: flex-start;
-
+    margin: 30px auto;
 }
 
 .student-table {
-
-    border: 1px solid #000;
-    /* Adds a border to the table */
-    width: 100%;
-    /* Adjust the width as needed */
-    padding: 4px;
-    justify-content: center;
+    border-collapse: collapse;
+    width: 90%;
 }
 
+.student-table th {
+    background-color: rgb(177, 202, 227);
+    border: 1px solid #000000;
+    padding: 12px;
+    text-align: center;
+}
 
-.student-table th,
 .student-table td {
-    border: 1px solid #000;
-    /* Adds a border to table cells */
-    padding: 8px;
-    /* Adds padding to table cells */
+    border: 1px solid #000000;
+    padding: 12px;
+    text-align: center;
 }
 
-.text-table {
+.student-table td:nth-child(4),
+.student-table td:nth-child(5),
+.student-table td:nth-child(6) {
+    text-align: left;
+    padding-left: 20px;
+    /* ปรับตามความต้องการ */
+}
+
+.student-table td input {
+    width: 50px;
+    /* ปรับขนาด input ตามที่ต้องการ */
+}
+
+.text-header {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+}
+
+.text-data {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.student-table tbody tr:hover {
+    background-color: #c6c6c6;
 }

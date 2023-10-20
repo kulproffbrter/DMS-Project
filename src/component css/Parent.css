@@ -1,75 +1,104 @@
-.parent-container {
+.parentcomponent-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.search-container {
+.parent-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 300px;
+    width: 310px;
     height: 35px;
     padding: 8px 13px;
-    border-radius: 8px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #FFF;
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 253px;
+}
+
+.parent-container.focused {
+    border-color: rgb(178, 178, 178);
 }
 
 .search-box {
     display: flex;
     align-items: center;
-    /*flex: 1;
-    padding-left: 10px;*/
+    flex: 1;
+    padding-left: 10px;
 }
 
 .search-box input {
-    /*flex: 1;*/
+    flex: 1;
     padding: 0.5rem;
     border: none;
     outline: none;
+    background-color: #FFF;
 }
 
 .icon-search,
 .icon-close {
-    margin-right: 10px;
-    /* Adjust spacing between icon and input */
+    align-items: center;
 }
 
-.button-frame {
+.dropdown-floor {
+    display: flex;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    margin-top: 50px;
+}
+
+.dropdown-status {
+    display: flex;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100px;
+    height: 35px;
+    margin-top: 50px;
+    margin-right: 465px;
+}
+
+/* .create-button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 15px;
-    margin-top: 45px;
-    margin-right: 100px;
+    margin-top: 50px;
+    margin-right: 255px;
 }
 
-button {
+.create-button span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.button-style {
     display: flex;
-    padding: 22px 15px;
+    justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 150px;
-    border-radius: 8px;
+    padding: 17px 10px;
+    width: 120px;
+    border-radius: 5px;
     border: 1px solid #000;
     background: #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-button:hover {
+.button-style:hover {
     background-color: #ECECEC;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid #000;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-button:active {
+.button-style:active {
     background-color: #B1B1B1;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px solid #000;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
+} */

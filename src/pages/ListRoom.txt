@@ -1,0 +1,158 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../pages/pages css/ListRoom.css';
+import ParentComponent from '../components/ParentComponent';
+import { DataListroom } from '../components/DataListroom';
+import { LuMailPlus } from 'react-icons/lu';
+import { MdMarkEmailRead } from 'react-icons/md';
+import Modal from 'react-modal';  // นำเข้า react-modal
+
+const ListRooms = () => {
+  const data = DataListroom.getData();
+
+  const [isMailSentPrice, setIsMailSentPrice] = useState(data.map(() => false));
+  const [isMailSentUtility, setIsMailSentUtility] = useState(data.map(() => false));
+  const [isSaveAndSendVisible, setIsSaveAndSendVisible] = useState(false);
+  const [confirmSendBill, setConfirmSendBill] = useState(false);
+
+  const handleMailIconPriceClick = (index) => {
+    const updatedIsMailSent = [...isMailSentPrice];
+    updatedIsMailSent[index] = !updatedIsMailSent[index];
+    setIsMailSentPrice(updatedIsMailSent);
+    setIsSaveAndSendVisible(updatedIsMailSent.some((value) => value));
+  };
+
+  const handleMailIconUtilityClick = (index) => {
+    const updatedIsMailSent = [...isMailSentUtility];
+    updatedIsMailSent[index] = !updatedIsMailSent[index];
+    setIsMailSentUtility(updatedIsMailSent);
+    setIsSaveAndSendVisible(updatedIsMailSent.some((value) => value));
+  };
+
+  const handleToggleAllPrice = () => {
+    const allChecked = isMailSentPrice.every((val) => val);
+    const updatedIsMailSent = isMailSentPrice.map(() => !allChecked);
+    setIsMailSentPrice(updatedIsMailSent);
+    setIsSaveAndSendVisible(updatedIsMailSent.some((value) => value));
+  };
+
+  const handleToggleAllUtility = () => {
+    const allChecked = isMailSentUtility.every((val) => val);
+    const updatedIsMailSent = isMailSentUtility.map(() => !allChecked);
+    setIsMailSentUtility(updatedIsMailSent);
+    setIsSaveAndSendVisible(updatedIsMailSent.some((value) => value));
+  };
+
+  const handleSendBillClick = () => {
+    setConfirmSendBill(true);
+  };
+
+  const handleConfirmSendBill = () => {
+    console.log('Sending bill...');
+    setConfirmSendBill(false);
+  };
+
+  const handleCancelSendBill = () => {
+    console.log('Send bill canceled.');
+    setConfirmSendBill(false);
+  };
+
+  return (
+    <div className='page-listroom'>
+      <div>
+        <ParentComponent />
+      </div>
+      <div className='listroom-container'>
+        <table className="info-table">
+          <thead className='header'>
+            <tr>
+              <th>ชั้น</th>
+              <th>ห้อง</th>
+              <th>สมาชิก</th>
+              <th>
+                <input
+                  className='checkbox-input'
+                  type="checkbox"
+                  checked={isMailSentPrice.every(Boolean)}
+                  onChange={handleToggleAllPrice}
+                />
+                ราคาห้อง
+              </th>
+              <th>
+                <input
+                  className='checkbox-input'
+                  type="checkbox"
+                  checked={isMailSentUtility.every(Boolean)}
+                  onChange={handleToggleAllUtility}
+                />
+                ค่าน้ำค่าไฟ
+              </th>
+              <th>สถานะ</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((item, index) => (
+              <tr className='text-field' key={item.floorID}>
+                <td>{item.floorID}</td>
+                <td><Link to="/make-bill">{item.roomNo}</Link></td>
+                <td>{item.member}</td>
+                <td>
+                  <input
+                    className='checkbox-icon'
+                    type="checkbox"
+                    checked={isMailSentPrice[index]}
+                    onChange={() => handleMailIconPriceClick(index)}
+                  />
+                  <div className='item-price-container'>
+                    {item.price}
+                    <LuMailPlus />
+                  </div>
+                </td>
+                <td>
+                  <input
+                    className='checkbox-icon'
+                    type="checkbox"
+                    checked={isMailSentUtility[index]}
+                    onChange={() => handleMailIconUtilityClick(index)}
+                  />
+                  <div className='item-utility-container'>
+                    {item.utility}
+                    <LuMailPlus />
+                  </div>
+                </td>
+                <td className={item.status === 'เสร็จสิ้น' ? 'green-text' : item.status === 'ยังไม่ชำระ' ? 'red-text' : ''}>
+                  {item.status}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {isSaveAndSendVisible && (
+          <button className='save-and-send-button' onClick={handleSendBillClick}>
+            ส่งบิล
+          </button>
+        )}
+        <Modal
+          isOpen={confirmSendBill}
+          onRequestClose={() => setConfirmSendBill(false)}
+          contentLabel='Confirm Send Bill'
+          className='modal-send-Pricebill-container'
+          overlayClassName='modal-overlay'
+        >
+          <div className='confirm-dialog-content'>
+            <p className='title-message-dialogBox'>คุณต้องการส่งข้อมูลบิลราคาห้องไปที่นักศึกษาใช่ไหม</p>
+            <div className='button-confirm-container'>
+              <button onClick={handleCancelSendBill} className='cancel-button'>ยกเลิก</button>
+              <button onClick={handleConfirmSendBill} className='confirm-button'>
+                ตกลง
+                {confirmSendBill ? <MdMarkEmailRead /> : <LuMailPlus />}
+              </button>
+            </div>
+          </div>
+        </Modal>
+      </div>
+    </div>
+  );
+};
+
+export default ListRooms;

@@ -12,7 +12,6 @@ body {
   height: 80px;
   display: flex;
   justify-content: space-between;
-  /* Adjust to position the columns */
   align-items: center;
 }
 
@@ -24,12 +23,11 @@ body {
 
 .menu-bars-container {
   margin-right: 50px;
-  /* Adjust the margin as needed */
 }
 
 .menu-bars {
   font-size: 2rem;
-  background: white;
+
   display: flex;
   padding: 10px;
   align-items: flex-start;
@@ -48,7 +46,7 @@ body {
 }
 
 .pagename span {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 25px;
 }
 

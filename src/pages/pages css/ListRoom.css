@@ -1,0 +1,205 @@
+.listroom-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+}
+
+.info-table {
+    border-collapse: collapse;
+    width: 60%;
+}
+
+.info-table th {
+    background-color: rgb(177, 202, 227);
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #000000;
+    padding: 5px;
+    line-height: 1.2;
+    max-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* .checkbox-input {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.checkbox-icon {
+    margin-right: 5px;
+    vertical-align: middle;
+} */
+
+.item-price-container,
+.item-utility-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal PriceBill Dialog Box */
+.title-message-dialogBox {
+    margin-top: 30px;
+}
+
+.modal-send-Pricebill-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* ปรับความโปร่งใสของพื้นหลัง */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-dialog-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.button-confirm-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 30px;
+}
+
+.cancel-button {
+    padding: 15px 30px;
+    height: 25px;
+    max-width: 80px;
+    margin-right: 30px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #9da4ad;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel-button:hover {
+    border: none;
+    border-radius: 5px;
+    background: #96999d;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cancel-button:active {
+    border: none;
+    border-radius: 5px;
+    background: #7d8083;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.confirm-button {
+    padding: 15px 30px;
+    height: 25px;
+    max-width: 80px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: #3FA0F9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-button:hover {
+    border: none;
+    border-radius: 5px;
+    background: #3e8ed9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.confirm-button:active {
+    border: none;
+    border-radius: 5px;
+    background: #2a74ba;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/**/
+
+.info-table th,
+.info-table td {
+    position: relative;
+    text-align: center;
+}
+
+.info-table th .checkbox-input,
+.info-table td .checkbox-icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.green-text {
+    color: green;
+}
+
+.red-text {
+    color: red;
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #000000;
+    padding: 12px;
+    text-align: center;
+}
+
+.header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.text-fields {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.text-fields button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+
+.info-table tbody tr:hover {
+    background-color: #c6c6c6;
+}
+
+.info-table tbody tr:active {
+    background-color: #9d9d9d;
+}
+
+.save-and-send-button {
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    margin-left: 20px;
+    background-color: #e3e3e3;
+
+}

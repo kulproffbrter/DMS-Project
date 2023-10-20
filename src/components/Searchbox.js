@@ -4,9 +4,18 @@ import '../component css/Searchbox.css';
 
 const SearchBox = () => {
     const [query, setQuery] = useState('');
+    const [isInputFocused, setIsInputFocused] = useState(false);
 
     const handleInputChange = (event) => {
         setQuery(event.target.value);
+    };
+
+    const handleInputFocus = () => {
+        setIsInputFocused(true);
+    };
+
+    const handleInputBlur = () => {
+        setIsInputFocused(false);
     };
 
     const handleClear = () => {
@@ -14,7 +23,7 @@ const SearchBox = () => {
     };
 
     return (
-        <div className='container'>
+        <div className={`container ${isInputFocused ? 'focused' : ''}`}>
             <div className='icon-search'>
                 <AiOutlineSearch size={20} />
             </div>
@@ -23,7 +32,9 @@ const SearchBox = () => {
                     type="text"
                     value={query}
                     onChange={handleInputChange}
-                    placeholder="Search..."
+                    onFocus={handleInputFocus}
+                    onBlur={handleInputBlur}
+                    placeholder="ค้นหา..."
                 />
             </div>
             <div className='icon-close'>

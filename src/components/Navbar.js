@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import '../component css/Navbar.css'
+import '../component css/Navbar.css';
 import { SidebarData } from './SidebarData';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { BsPersonCircle } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
-  const [selectedTitle, setSelectedTitle] = useState('Dashboard');  // Initialize with the default title
+  const [selectedTitle, setSelectedTitle] = useState('');
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -17,9 +17,12 @@ function Navbar() {
     showSidebar();
   };
 
+  const location = useLocation();
+  const showNavbar = location.pathname;
+
   return (
     <>
-      <IconContext.Provider value={{ color: '#1c1b1f' }} className='iconmain'>
+      {showNavbar && (<IconContext.Provider value={{ color: '#1c1b1f' }} className='iconmain'>
         <div className='navbar'>
           <div className='leftbar'>
             <div className='menu-bars-container'>
@@ -45,21 +48,18 @@ function Navbar() {
                 <RxHamburgerMenu style={{ color: 'black' }} />
               </Link>
             </li>
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path} onClick={() => handleItemClick(item.title)}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
+            {SidebarData.map((item, index) => (
+              <li key={index} className={item.cName}>
+                <Link to={item.path} onClick={() => handleItemClick(item.title)}>
+                  {item.icon}
+                  <span>{item.title}</span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
-      </IconContext.Provider>
+      </IconContext.Provider>)}
     </>
-
   );
 }
 

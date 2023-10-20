@@ -1,0 +1,86 @@
+/* Login.css */
+
+body {
+    background: #F8F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.field-container {
+    margin-top: 40px;
+}
+
+.username-container,
+.password-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.username-container label,
+.password-container label {
+    font-size: 15px;
+    color: #333;
+}
+
+.username-container input,
+.password-container input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-button-container {
+    margin-top: 30px;
+    width: 56%;
+    text-decoration: none;
+}
+
+.login-button {
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #006bdd;
+    border: none;
+    border-radius: 4px;
+}
+
+.login-button:active {
+    background-color: #004b9b;
+    border: none;
+    border-radius: 4px;
+}

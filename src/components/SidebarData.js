@@ -1,30 +1,30 @@
 import * as BiIcons from 'react-icons/bi';
 import * as PiIcons from 'react-icons/pi';
-import * as MdIcons from 'react-icons/md'
+import * as MdIcons from 'react-icons/md';
 
 export const SidebarData = [
   {
-    title: 'Dashboard',
+    title: 'หน้าหลัก',
     path: '/',
     icon: <BiIcons.BiBarChartAlt />,
     cName: 'nav-text'
   },
   {
-    title: 'Student List',
-    path: '/studentlist',
+    title: 'ข้อมูลนักศึกษา',
+    path: '/student-list',
     icon: <PiIcons.PiUserList />,
     cName: 'nav-text'
   },
   {
-    title: 'Room contract',
-    path: '/roomcontract',
+    title: 'สัญญาหอพัก',
+    path: '/room-contract',
     icon: <MdIcons.MdOutlineArticle />,
     cName: 'nav-text'
   },
   {
-    title: 'List of rooms',
-    path: '/listofroom',
-    icon: <MdIcons.MdOutlineBedroomChild />,
+    title: 'ข้อมูลห้อง',
+    path: '/list-room',
+    icon: <BiIcons.BiBed />,
     cName: 'nav-text'
   },
 ];

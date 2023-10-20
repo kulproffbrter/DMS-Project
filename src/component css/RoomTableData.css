@@ -1,0 +1,145 @@
+.flex-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dropdown-num-floor {
+    text-align: center;
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-left: 255px;
+}
+
+
+.data-room-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    margin-top: 15px;
+}
+
+.info-table-all {
+    border-collapse: collapse;
+    width: 60%;
+}
+
+.info-table-all th {
+    background-color: rgb(177, 202, 227);
+}
+
+.info-table-all th,
+.info-table-all td {
+    border: 1px solid #000000;
+    padding: 5px;
+    line-height: 1.2;
+    max-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.T-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.roomNumber {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.room-status-button {
+    border: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.Box-icon-container {
+    display: flex;
+    justify-content: end;
+    padding: 1;
+    align-items: center;
+}
+
+.icon-group {
+    display: flex;
+    justify-content: center;
+    width: 145px;
+    height: 87px;
+    position: relative;
+    margin-top: 4px;
+    margin-right: 250px;
+}
+
+.Boxs1 {
+    width: 58px;
+    height: 59px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background-color: #829DFF;
+    border-radius: 20px;
+}
+
+.Boxs2 {
+    width: 58px;
+    height: 59px;
+    left: 86px;
+    top: 0;
+    position: absolute;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+}
+
+.stage-empty {
+    left: 17px;
+    top: 63px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stage-none {
+    left: 10px;
+    top: 63px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background-color-emp {
+    background-color: #829DFF;
+}
+
+.background-color-emp:hover {
+    background-color: #6f85d7;
+}
+
+.background-color-emp:active {
+    background-color: #4d64b7;
+}
+
+.background-color-none {
+    background-color: #D9D9D9;
+}
+
+.background-color-none:hover {
+    background-color: #c4c0c0;
+}
+
+.background-color-none:active {
+    background-color: #969595;
+}
