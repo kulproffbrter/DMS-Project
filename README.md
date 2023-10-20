@@ -67,4 +67,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) 
+
+## Interface Model 
+<img width="960" alt="image" src="https://github.com/kulproffbrter/DMS-Project/assets/120614832/28838a29-5a34-40bb-ba81-388857f04701">
+
+### Dashboard
+<img width="947" alt="image" src="https://github.com/kulproffbrter/DMS-Project/assets/120614832/f2bb22dd-e490-4630-bb11-089b4b0f9dfe">
+
+### Student List
+<img width="959" alt="image" src="https://github.com/kulproffbrter/DMS-Project/assets/120614832/30559e04-5d12-4173-a1c9-c23ac7d06580">
+
+### Room Contract
+<img width="960" alt="image" src="https://github.com/kulproffbrter/DMS-Project/assets/120614832/ce2c5996-d1a8-4c6b-8b1c-afe46b9d0caf">
+
+### List of rooms
+<img width="960" alt="image" src="https://github.com/kulproffbrter/DMS-Project/assets/120614832/9b2df337-26e8-43cc-be99-4275ae9c54cc">
+
+
+
